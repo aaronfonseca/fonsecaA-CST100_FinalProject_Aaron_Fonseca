@@ -125,10 +125,21 @@ public class NFLPlayer {
 	public void setPassingYards(double newPassingYards) {
 		passingYards = newPassingYards;
 	}
+	
 	// Set RushingYards
 	public void setRushingYards(double newRushingYards) {
 		rushingYards = newRushingYards;
 	}
+
+	// Set Receptions
+	public void setReceptions( double newReceptions) {
+		receptions = newReceptions;
+	}
+
+	public void setFieldGoalsAttempt( double newFieldGoalsAttempt){
+		fieldGoalsAttempt = newFieldGoalsAttempt;
+	}
+
 	
 	// Get Id
 	public int getId() {
@@ -171,7 +182,7 @@ public class NFLPlayer {
 	}
 	
 	// Get Interceptions
-	public double getinterceptions() {
+	public double getInterceptions() {
 		return interceptions;
 	}
 	
@@ -181,8 +192,17 @@ public class NFLPlayer {
 	}
 	
 	// Get RushingYards
-		public double getRushingYards() {
-			return rushingYards;
-		}
+	public double getRushingYards() {
+		return rushingYards;
+	}
+
+	// Set Receptions
+	public void getReceptions() {
+		return receptions;
+	}
+
+	public void getFieldGoalsAttempt(){
+	return fieldGoalsAttempt;
+	}
 	
 }
