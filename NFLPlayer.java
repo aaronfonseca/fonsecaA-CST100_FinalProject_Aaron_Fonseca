@@ -25,55 +25,44 @@
 * +NFLPlayer()                                          *
 ********************************************************/
 
-import java.util.Date;
-
 public class NFLPlayer {
 	private int id;
 	private int number;
 	private String team;
 	private String name;
 	private String status;
-	private String position;
-	private double touchdowns;
-	private double completions;
-	private double interceptions;
-	private double passingYards;
-	private double rushingYards;
-	private double receptions;
-	private double tackles;
-	private double sacks;
-	private double fumbles;
-	private double forcedFumbles;
-	private double fieldGoalsAttempt;
-	private double fieldGoalsMade;
-	private double fieldGoalsPercentage;
-	private double fieldGoalsDisctance;
-	private Date dateTraded;
-	private Date dateAdded;
+    private String height;
+    private String weight;
+    private String born;
+    private String college;
+    private double g;
+    private double gs;
+    
 	
 	// Create Default Player
-	NFLPlayer() {
-		id = 0;
-		number = 0;
-		team = "";
-		name = ""; 
-		status = "";
-		position = "";
-		touchdowns = 0;
-		completions = 0;
-		interceptions = 0;
-		passingYards = 0;
-		rushingYards = 0;
-		receptions = 0;
-		tackles = 0;
-		sacks = 0;
-		fumbles = 0;
-		forcedFumbles = 0;
-		fieldGoalsAttempt = 0;
-		fieldGoalsMade = 0;
-		fieldGoalsPercentage = 0;
-		fieldGoalsDisctance = 0;
-		dateAdded = new Date();
+	public NFLPlayer() {
+		this(0, 0, "unknown", "unknown", "unknown", "unknown", "unknown", "unknown", "unknown", 0, 0);
+	}
+	
+	// Create Player with specific values
+	public NFLPlayer(int id, int number, String team, String name, String status, 
+			String height, String weight, String born, String college, double g, double gs) {
+		this.setId(id);
+		this.setNumber(number);
+		this.setTeam(team);
+		this.setName(name);
+		this.setStatus(status);
+	    this.setHeight(height);
+	    this.setWeight(weight);
+	    this.setBorn(born);
+	    this.setCollege(college);
+	    this.setG(g);
+	    this.setGs(gs);
+	}
+
+	// Get Id
+	public int getId() {
+		return id;
 	}
 		
 	// Set Id
@@ -81,9 +70,20 @@ public class NFLPlayer {
 		id = newId;
 	}
 	
+	
+	// Get Number
+	public int getNumber() {
+		return number;
+	}
+	
 	// Set Number
 	public void setNumber(int newNumber) {
 		number = newNumber;
+	}
+		
+	// Get Team
+	public String getTeam() {
+		return team;
 	}
 		
 	// Set Team
@@ -91,9 +91,19 @@ public class NFLPlayer {
 		team = newTeam;
 	}
 	
+	// Get Name
+	public String getName() {
+		return name;
+	}
+	
 	// Set Name
 	public void setName(String newName) {
 		name = newName;
+	}
+	
+	// Get Status
+	public String getStatus() {
+		return status;
 	}
 	
 	// Set Status
@@ -101,108 +111,60 @@ public class NFLPlayer {
 		status = newStatus;
 	}
 	
-	// Set Position
-	public void setPosition(String newPosition) {
-		position = newPosition;
-	}
-	
-	// Set TouchDowns
-	public void setTouchdowns(double newTouchdowns) {
-		touchdowns = newTouchdowns;
-	}
-	
-	// Set Completions
-	public void setCompletions(double newCompletions) {
-		completions = newCompletions;
-	}
-	
-	// Set Interceptions
-	public void setInterceptions(double newInterceptions) {
-		interceptions = newInterceptions;
-	}
-	
-	// Set PassingYards
-	public void setPassingYards(double newPassingYards) {
-		passingYards = newPassingYards;
-	}
-	
-	// Set RushingYards
-	public void setRushingYards(double newRushingYards) {
-		rushingYards = newRushingYards;
+	// Get Height
+	public String getHeight() {
+		return height;
 	}
 
-	// Set Receptions
-	public void setReceptions( double newReceptions) {
-		receptions = newReceptions;
+	// Set Height
+	public void setHeight(String height) {
+		this.height = height;
 	}
 
-	public void setFieldGoalsAttempt( double newFieldGoalsAttempt){
-		fieldGoalsAttempt = newFieldGoalsAttempt;
+	// Get Weight
+	public String getWeight() {
+		return weight;
 	}
 
-	
-	// Get Id
-	public int getId() {
-		return id;
-	}
-	
-	// Get Number
-	public int getNumber() {
-		return number;
-	}
-		
-	// Get Team
-	public String getTeam() {
-		return team;
-	}
-	
-	// Get Name
-	public String getName() {
-		return name;
-	}
-	
-	// Get Status
-	public String getStatus() {
-		return status;
+	// Set Weight
+	public void setWeight(String weight) {
+		this.weight = weight;
 	}
 
-	// Get Position
-	public String getPosition() {
-		return position;
-	}
-	
-	// Get Touchdowns
-	public double getTouchdowns() {
-		return touchdowns;
-	}
-	
-	// Get Completions
-	public double getCompletions() {
-		return completions;
-	}
-	
-	// Get Interceptions
-	public double getInterceptions() {
-		return interceptions;
-	}
-	
-	// Get PassingYards
-	public double getPassingYards() {
-		return passingYards;
-	}
-	
-	// Get RushingYards
-	public double getRushingYards() {
-		return rushingYards;
+	// Get Born
+	public String getBorn() {
+		return born;
 	}
 
-	// Set Receptions
-	public void getReceptions() {
-		return receptions;
+	// Set Born
+	public void setBorn(String born) {
+		this.born = born;
 	}
 
-	public void getFieldGoalsAttempt(){
-	return fieldGoalsAttempt;
+	// Get College
+	public String getCollege() {
+		return college;
+	}
+
+	// Set College
+	public void setCollege(String college) {
+		this.college = college;
+	}
+
+	public double getG() {
+		return g;
+	}
+
+	public void setG(double g) {
+		this.g = g;
+	}
+
+	public double getGs() {
+		return gs;
+	}
+
+	public void setGs(double gs) {
+		this.gs = gs;
 	}
 	
 }
