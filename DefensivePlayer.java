@@ -1,5 +1,5 @@
 
-public class DefensivePlayer extends NFLPlayer {
+public class DefensivePlayer extends NFLPlayer implements Celebrator {
 
 	private double tacklesComb;
 	private double tacklesTotal;
@@ -131,5 +131,10 @@ public class DefensivePlayer extends NFLPlayer {
 	public void setFumblesFF(double fumblesFF) {
 		FumblesFF = fumblesFF;
 	}
+	
+	@Override
+	public String celebrate() {
+		return " tackles a quarterback to celebrate being drafted.";
+		}
 	
 }

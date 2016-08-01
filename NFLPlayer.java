@@ -1,3 +1,5 @@
+import java.util.Random;
+
 /********************************************************
 *                      NFLPlayer                        *
 *-------------------------------------------------------*
@@ -25,7 +27,7 @@
 * +NFLPlayer()                                          *
 ********************************************************/
 
-public class NFLPlayer {
+public abstract class NFLPlayer implements Celebrator{
 	private int id;
 	private int number;
 	private String team;
@@ -166,5 +168,24 @@ public class NFLPlayer {
 	public void setGs(double gs) {
 		this.gs = gs;
 	}
+	
+	@Override
+	public String celebrate() {
+		int r = new Random().nextInt(4);
+		String message = "";
+		switch(r){
+			case 0: message = " dances to celebrate his draft";
+	        	break;
+			case 1: message = " buys a truck to celebrate his draft";
+        		break;
+			case 2: message = " goes to disneyland to celebrate his draft";
+        		break;
+			case 3: message = " pays his bills to celebrate his draft";
+        		break;
+			case 4: message = " does a flip to celebrate his draft";
+        		break;
+		}
+		return getName() + message;
+		}
 	
 }

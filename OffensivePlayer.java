@@ -1,5 +1,4 @@
-
-public class OffensivePlayer extends NFLPlayer {
+public class OffensivePlayer extends NFLPlayer implements Celebrator {
 	
 	private double PassingComp;
 	private double PassingAtt;	
@@ -222,5 +221,11 @@ public class OffensivePlayer extends NFLPlayer {
 		public void setReceivingLong(double receivingLong) {
 			ReceivingLong = receivingLong;
 		}
+		
+		@Override
+		public String celebrate() {
+			return " spikes the football to celebrate being drafted.";
+			}
+		
 	
 }
