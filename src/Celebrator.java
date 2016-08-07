@@ -1,4 +1,3 @@
-
 public interface Celebrator {
 
 	// Describe Celebration
